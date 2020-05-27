@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	_ "fmt"
 	gogithub "github.com/google/go-github/github"
-	"github.com/whosonfirst/go-webhookd/v2"
-	"github.com/whosonfirst/go-webhookd/v2/transformations"
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/transformation"
 	_ "log"
 	"net/url"
 	"strconv"
@@ -17,7 +17,7 @@ import (
 func init() {
 
 	ctx := context.Background()
-	err := transformations.RegisterTransformation(ctx, "githubcommits", NewGitHubCommitsTransformation)
+	err := transformation.RegisterTransformation(ctx, "githubcommits", NewGitHubCommitsTransformation)
 
 	if err != nil {
 		panic(err)

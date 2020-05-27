@@ -4,5 +4,6 @@ go 1.12
 
 require (
 	github.com/google/go-github v17.0.0+incompatible
-	github.com/whosonfirst/go-webhookd/v2 v2.0.0
+	github.com/google/go-querystring v1.0.0 // indirect
+	github.com/whosonfirst/go-webhookd/v3 v3.0.0
 )

@@ -10,8 +10,8 @@ import (
 	"crypto/hmac"
 	"encoding/json"
 	gogithub "github.com/google/go-github/github"
-	"github.com/whosonfirst/go-webhookd/v2"
-	"github.com/whosonfirst/go-webhookd/v2/receivers"
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/receiver"
 	"io/ioutil"
 	_ "log"
 	"net/http"
@@ -21,7 +21,7 @@ import (
 func init() {
 
 	ctx := context.Background()
-	err := receivers.RegisterReceiver(ctx, "github", NewGitHubReceiver)
+	err := receiver.RegisterReceiver(ctx, "github", NewGitHubReceiver)
 
 	if err != nil {
 		panic(err)
