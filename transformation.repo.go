@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"fmt"
 	gogithub "github.com/google/go-github/github"
 	"github.com/whosonfirst/go-webhookd/v3"
 	"github.com/whosonfirst/go-webhookd/v3/transformation"
-	"fmt"
 	"net/url"
 	"strconv"
 )
@@ -28,12 +28,12 @@ func init() {
 // commit webhook messages in to the name of the repository where the commit occurred.
 type GitHubRepoTransformation struct {
 	webhookd.WebhookTransformation
-	// ExcludeAdditions is a boolean flag to exclude newly added files from consideration.	
-	ExcludeAdditions     bool
-	// ExcludeModifications is a boolean flag to exclude updated (modified) files from consideration.	
+	// ExcludeAdditions is a boolean flag to exclude newly added files from consideration.
+	ExcludeAdditions bool
+	// ExcludeModifications is a boolean flag to exclude updated (modified) files from consideration.
 	ExcludeModifications bool
-	// ExcludeDeletions is a boolean flag to exclude updated (modified) files from consideration.		
-	ExcludeDeletions     bool
+	// ExcludeDeletions is a boolean flag to exclude updated (modified) files from consideration.
+	ExcludeDeletions bool
 }
 
 // NewGitHubRepoTransformation() creates a new `GitHubRepoTransformation` instance, configured by 'uri'

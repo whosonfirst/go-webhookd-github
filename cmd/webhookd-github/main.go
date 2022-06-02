@@ -1,3 +1,5 @@
+// webhookd-github is a command line tool to start a go-webhookd daemon and serve requests over HTTP with support for
+// whosonfirst/go-webhookd-github receivers and transformations.
 package main
 
 import (
@@ -18,6 +20,12 @@ func main() {
 	fs := flagset.NewFlagSet("webhooks")
 
 	config_uri := fs.String("config-uri", "", "A valid Go Cloud runtimevar URI representing your webhookd config.")
+
+	fs.Usage = func() {
+		fmt.Fprintf(os.Stderr, "webhookd-github is a command line tool to start a go-webhookd daemon and serve requests over HTTP with support for whosonfirst/go-webhookd-github receivers and transformations.\n")
+		fmt.Fprintf(os.Stderr, "Usage:\n\t %s [options]\n", os.Args[0])
+		fs.PrintDefaults()
+	}
 
 	flagset.Parse(fs)
 
