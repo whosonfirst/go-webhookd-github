@@ -36,13 +36,13 @@ type GitHubRepoTransformation struct {
 	// ExcludeDeletions is a boolean flag to exclude updated (modified) files from consideration.
 	ExcludeDeletions bool
 	// A boolean flag signaling the commit message should be prepended to the top of the final output in the form of '#message {COMMIT_MESSAGE}'
-	prepend_message  bool
-	// A boolean flag signaling the commit author should be prepended to the top of the final output in the form of '#author {COMMIT_AUTHOR}'	
-	prepend_author   bool
+	prepend_message bool
+	// A boolean flag signaling the commit author should be prepended to the top of the final output in the form of '#author {COMMIT_AUTHOR}'
+	prepend_author bool
 	// An optional regular expression that will be compared to the commit message; if it matches the transformer will return an error with code `webhookd.HaltEvent`
-	halt_on_message  *regexp.Regexp
-	// An optional regular expression that will be compared to the commit author; if it matches the transformer will return an error with code `webhookd.HaltEvent`	
-	halt_on_author   *regexp.Regexp
+	halt_on_message *regexp.Regexp
+	// An optional regular expression that will be compared to the commit author; if it matches the transformer will return an error with code `webhookd.HaltEvent`
+	halt_on_author *regexp.Regexp
 }
 
 // NewGitHubRepoTransformation() creates a new `GitHubRepoTransformation` instance, configured by 'uri'
@@ -57,7 +57,7 @@ type GitHubRepoTransformation struct {
 // * `?prepend_message` An optional boolean value to prepend the commit message to the final output. This takes the form of '#message {COMMIT_MESSAGE}'
 // * `?prepend_author` An optional boolean value to prepend the name of the commit author to the final output. This takes the form of '#author {COMMIT_AUTHOR}'
 // * `?halt_on_message` An optional regular expression that will be compared to the commit message; if it matches the transformer will return an error with code `webhookd.HaltEvent`
-// * `?halt_on_author` An optional regular expression that will be compared to the commit author; if it matches the transformer will return an error with code `webhookd.HaltEvent`	
+// * `?halt_on_author` An optional regular expression that will be compared to the commit author; if it matches the transformer will return an error with code `webhookd.HaltEvent`
 func NewGitHubRepoTransformation(ctx context.Context, uri string) (webhookd.WebhookTransformation, error) {
 
 	u, err := url.Parse(uri)
