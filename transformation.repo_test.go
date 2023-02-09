@@ -3,11 +3,12 @@ package github
 import (
 	"bytes"
 	"context"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/transformation"
 	"io"
 	"os"
 	"testing"
+
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/transformation"	
 )
 
 func TestGitHubRepoTransformation(t *testing.T) {

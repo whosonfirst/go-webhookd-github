@@ -10,13 +10,14 @@ import (
 	"crypto/hmac"
 	"encoding/json"
 	"fmt"
-	gogithub "github.com/google/go-github/v48/github"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/receiver"
 	"io"
 	_ "log"
 	"net/http"
 	"net/url"
+
+	gogithub "github.com/google/go-github/v48/github"
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/receiver"	
 )
 
 func init() {

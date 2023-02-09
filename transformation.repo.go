@@ -5,12 +5,13 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	gogithub "github.com/google/go-github/v48/github"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/transformation"
 	"net/url"
 	"regexp"
 	"strconv"
+
+	gogithub "github.com/google/go-github/v48/github"
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/transformation"	
 )
 
 func init() {

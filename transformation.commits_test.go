@@ -6,11 +6,12 @@ import (
 	"crypto/sha256"
 	"encoding/csv"
 	"fmt"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/transformation"
 	"io"
 	"os"
 	"testing"
+
+	"github.com/whosonfirst/go-webhookd/v3"
+	"github.com/whosonfirst/go-webhookd/v3/transformation"	
 )
 
 func TestGitHubCommitsTransformation(t *testing.T) {

@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/whosonfirst/go-webhookd/v3/receiver"
 	"io"
 	"net/http"
 	"os"
 	"strconv"
 	"testing"
+
+	"github.com/whosonfirst/go-webhookd/v3/receiver"	
 )
 
 func TestGitHubReceiver(t *testing.T) {
