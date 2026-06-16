@@ -28,9 +28,9 @@ func GenerateSignature(body string, secret string) (string, error) {
 // the fact... (20161017/thisisaaronland)
 
 // UnmarshalEvent unmarshals a GitHub event message derived from 'body' in to an interface of type 'event_type'.
-func UnmarshalEvent(event_type string, body []byte) (interface{}, error) {
+func UnmarshalEvent(event_type string, body []byte) (any, error) {
 
-	var event interface{}
+	var event any
 	ok := true
 
 	switch event_type {
