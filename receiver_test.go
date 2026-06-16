@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/whosonfirst/go-webhookd/v3/receiver"	
+	"github.com/whosonfirst/go-webhookd/v4/receiver"	
 )
 
 func TestGitHubReceiver(t *testing.T) {

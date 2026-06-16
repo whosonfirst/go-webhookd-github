@@ -9,9 +9,9 @@ import (
 	"regexp"
 	"strconv"
 
-	gogithub "github.com/google/go-github/v48/github"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/transformation"	
+	gogithub "github.com/google/go-github/v88/github"
+	"github.com/whosonfirst/go-webhookd/v4"
+	"github.com/whosonfirst/go-webhookd/v4/transformation"	
 )
 
 func init() {

@@ -14,7 +14,7 @@ Before you begin please [read the go-webhookd documentation](https://github.com/
 
 ```
 import (
-	_ "github.com/go-webhookd-github"
+	_ "github.com/go-webhookd-github/v4"
 )
 ```
 

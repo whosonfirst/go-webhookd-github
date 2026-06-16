@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/transformation"	
+	"github.com/whosonfirst/go-webhookd/v4"
+	"github.com/whosonfirst/go-webhookd/v4/transformation"	
 )
 
 func TestGitHubRepoTransformation(t *testing.T) {
