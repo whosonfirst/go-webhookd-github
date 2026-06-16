@@ -11,13 +11,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	_ "log"
 	"net/http"
 	"net/url"
 
-	gogithub "github.com/google/go-github/v48/github"
-	"github.com/whosonfirst/go-webhookd/v3"
-	"github.com/whosonfirst/go-webhookd/v3/receiver"	
+	gogithub "github.com/google/go-github/v88/github"
+	"github.com/whosonfirst/go-webhookd/v4"
+	"github.com/whosonfirst/go-webhookd/v4/receiver"	
 )
 
 func init() {
